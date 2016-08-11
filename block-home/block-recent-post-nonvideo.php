@@ -37,7 +37,7 @@ $the_recent_post = new WP_Query( $args );
 
 										<div class="col-md-9 col-md-push-3">
 											<div class="post-summary">
-												<h1 class="post-title"><?php the_title(); ?></h2>
+												<a class="recent-post-nav" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><h1 class="post-title"><?php the_title(); ?></h1></a>
 
 												<?php the_content(); ?>
 

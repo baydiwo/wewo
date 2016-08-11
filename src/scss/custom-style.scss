@@ -5,6 +5,16 @@ $grey : #cccccc;
 $ea : #eaeaea;
 $yellow : #ffce57;
 
+.alignleft {
+    float: left;
+    margin:10px 10px 10px 0;
+}
+
+.alignright {
+    float: right;
+    margin:0px 10px 10px 10px;
+}
+
 .home-search , , .ad970 {
     background: $ea;
 }

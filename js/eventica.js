@@ -13,7 +13,7 @@
 		if(jQuery.isFunction($().superfish)) {
 			$('ul.sf-menu').superfish({
 				speed: 1,
-				speedOut: 1
+				speedOut: 0
 			});
   		}
 
@@ -119,4 +119,6 @@
 		}
 	});
 
+	//align center in paragraph
+	$('.aligncenter').parent('p').css('textAlign','center');
 })(jQuery);
