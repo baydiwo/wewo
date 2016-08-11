@@ -91,7 +91,7 @@ function tokopress_require_file( $file ) {
 
 //set custom style to last
 function high_priority_style() {
-  wp_enqueue_style( 'custom-style', THEME_URI . '/assets/css/style.css', array(), '', 'all' );
+  wp_enqueue_style( 'custom-style', THEME_URI . '/assets/css/custom-style.css', array(), '', 'all' );
 }
 add_action('wp_enqueue_scripts', 'high_priority_style', '999');
 

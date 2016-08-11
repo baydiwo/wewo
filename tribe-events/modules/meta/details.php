@@ -134,10 +134,12 @@
 		<?php
 		$cost = tribe_get_formatted_cost();
 		if ( ! empty( $cost ) ):
+			$int = filter_var($cost, FILTER_SANITIZE_NUMBER_INT);
+			$formatted_cost = number_format($int , 0, ',', '.');
 			?>
 		<tr>
 			<th> <?php _e( 'Cost:', 'tokopress' ) ?> </th>
-			<td class="tribe-events-event-cost"> <?php echo esc_html( tribe_get_formatted_cost() ) ?> </td>
+			<td class="tribe-events-event-cost">Rp <?php echo esc_html( $formatted_cost ) ?> </td>
 		</tr>
 		<?php endif ?>
 
@@ -164,10 +166,10 @@
 			?>
 		<tr>
 			<th> <?php _e( 'Website:', 'tokopress' ) ?> </th>
-			<td class="tribe-events-event-url"> 
+			<td class="tribe-events-event-url">
 				<a href="<?php echo esc_url( $website ); ?>">
 					<?php _e( 'Visit Event Website', 'tokopress' ); ?>
-				</a> 
+				</a>
 			</td>
 		</tr>
 		<?php endif ?>

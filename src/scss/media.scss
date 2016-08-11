@@ -1,0 +1,52 @@
+//mixin
+$tablet-width: 995px;
+$desktop-width: 992px;
+$breakpoint-alpha: 480px; // adjust to your needs
+
+//bootrap
+$screen-xs:                  480px !default;
+$screen-sm:                  768px !default;
+$screen-md:                  992px !default;
+$screen-lg:                  1200px !default;
+
+$screen-xs-max:              ($screen-xs - 1) !default;
+
+@media (max-width: 970px) {
+    .ad970 {
+        display: none;
+    }
+
+    .page-template-page_home_event-php .home-upcoming-events {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+
+    .tribe-events-list .type-tribe_events {
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (min-width: $screen-xs) {
+    .tribe-events-list .type-tribe_events {
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .tribe-events-list .type-tribe_events {
+        margin-bottom: 20px !important;
+    }
+}
+@media (min-width: $screen-md) {
+    .page-template-page_home_event-php .home-upcoming-events {
+        padding-bottom: 0;
+    }
+    .tribe-events-list .type-tribe_events {
+        margin-bottom: 20px !important;
+    }
+}
+@media (min-width: $screen-lg) {
+
+}

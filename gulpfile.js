@@ -9,7 +9,7 @@ var plumber    = require('gulp-plumber');
 
 gulp.task('sass', function() {
     return gulp.src([
-        'src/scss/style.scss'
+        'src/scss/custom-style.scss'
     ])
     .pipe(plumber())
     .pipe(prefix({

@@ -108,8 +108,15 @@ $organizer = tribe_get_organizer();
 			<a href="<?php echo tribe_get_event_link() ?>" class="more-link valign">
 				<i class="fa fa-ticket"></i>
 				<?php
-				if ( $cost = tribe_get_cost( null, true ) )
-					printf( '<br/><span class="cost">%s</span>', $cost );
+				$cost = tribe_get_cost( null, true );
+				if ( $cost != null ) {
+					$int = filter_var($cost, FILTER_SANITIZE_NUMBER_INT);
+					$formatted_cost = number_format($int , 0, ',', '.');
+					printf( '<br/><span class="cost">Rp %s</span>', $formatted_cost );
+				}
+				else {
+					printf( '<br/><span class="cost">Gratis</span>', $cost );
+				}
 				?>
 			</a>
 		</div>
