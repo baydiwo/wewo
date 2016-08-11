@@ -165,3 +165,5 @@ function add_my_post_types_to_query( $query ) {
 		$query->set( 'post_type', array( 'post', 'banners' ) );
 	return $query;
 }
+
+add_image_size( 'custom-size', 360, 220, true );

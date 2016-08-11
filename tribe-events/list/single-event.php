@@ -38,12 +38,12 @@ $organizer = tribe_get_organizer();
 		<div class="tribe-events-event-image">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 				<?php if(has_post_thumbnail()) : ?>
-					<?php the_post_thumbnail( 'blog-thumbnail' ); ?>
+					<?php the_post_thumbnail( 'custom-size' ); ?>
 				<?php else : ?>
 					<?php
 					global $_wp_additional_image_sizes;
-					$width = $_wp_additional_image_sizes['blog-thumbnail']['width'];
-					$height = $_wp_additional_image_sizes['blog-thumbnail']['height'];
+					$width = $_wp_additional_image_sizes['custom-size']['width'];
+					$height = $_wp_additional_image_sizes['custom-size']['height'];
 					?>
 					<img src="//placehold.it/<?php echo esc_attr($width); ?>x<?php echo esc_attr($height); ?>" title="<?php the_title(); ?>">
 				<?php endif; ?>
