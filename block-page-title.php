@@ -1,4 +1,12 @@
-<section id="page-title" class="page-title">
+<?php
+	$imageurl = null;
+if (in_category('video')) {
+	$youtube_url = get_field('youtube_url');
+	$youtube_id = substr($youtube_url, strpos($youtube_url, "=") + 1);
+	$imageurl = "http://img.youtube.com/vi/".$youtube_id."/maxresdefault.jpg";
+}
+?>
+<section id="page-title" class="page-title" style="background:url('<?php echo (!$imageurl ? the_post_thumbnail_url() : $imageurl); ?>'); background-size: cover; background-position-y:40%;">
 	<div class="container">
 
 		<?php tokopress_breadcrumb(); ?>

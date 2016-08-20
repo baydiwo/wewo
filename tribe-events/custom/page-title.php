@@ -1,5 +1,5 @@
 <?php $title_image = get_field('page_title_background'); ?>
-<section id="page-title" class="page-title" style="background:url(<?php echo $title_image['url']; ?>); background-size: cover;">
+<section id="page-title" class="page-title" style="background:url('<?php echo (!$title_image ? the_post_thumbnail_url() : $title_image['url']); ?>'); background-size: cover; background-position-y:40%;">
 	<div class="container">
 		<?php tokopress_breadcrumb_event(); ?>
 		<?php if ( is_single() ) : ?>

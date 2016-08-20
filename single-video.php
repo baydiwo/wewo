@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<?php if( ! of_get_option( 'tokopress_page_title_disable' ) ) : ?>
-		<?php //get_template_part( 'block-page-title' ); ?>
+		<?php get_template_part( 'block-page-title' ); ?>
 	<?php endif; ?>
 
 	<div id="main-content">
