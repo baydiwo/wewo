@@ -41,6 +41,7 @@ $yellow : #ffce57;
 .page-template-page_home_event-php .home-upcoming-events {
     padding-bottom: 40px;
 }
+
 .tribe-events-list {
 
     .type-tribe_events {
@@ -88,43 +89,52 @@ $yellow : #ffce57;
         }
     }
 
+    .vcalendar {
+        .event-list-wrapper-bottom .wraper-bottom-right {
+            top: 120px;
+        }
+        .hentry.tribe-events-first, .type-tribe_events.tribe-events-first , .type-tribe_events {
+            padding-bottom: 70px !important;
+        }
+    }
+
     //category colors
     .tribe-events-category-markiblon {
         .tribe-events-event-date, .event-list-wrapper-bottom .wraper-bottom-right {
             background: rgba(217,69,84,0.9);
         }
     }
-    
+
       .tribe-events-category-sapikejut {
         .tribe-events-event-date, .event-list-wrapper-bottom .wraper-bottom-right {
             background: rgba(242,185,64,0.9);
         }
     }
-    
+
        .tribe-events-category-makbalap {
         .tribe-events-event-date, .event-list-wrapper-bottom .wraper-bottom-right {
             background: rgba(150,152,154,0.9);
         }
     }
-    
+
        .tribe-events-category-abidin {
         .tribe-events-event-date, .event-list-wrapper-bottom .wraper-bottom-right {
             background: rgba(58,173,215,0.9);
         }
     }
-    
+
            .tribe-events-category-babinsa {
         .tribe-events-event-date, .event-list-wrapper-bottom .wraper-bottom-right {
             background: rgba(82,132,196,0.9);
         }
     }
-    
+
      .tribe-events-category-mantili {
         .tribe-events-event-date, .event-list-wrapper-bottom .wraper-bottom-right {
             background: rgba(146,114,92,0.9);
         }
     }
-    
+
     .tribe-events-category-simanis {
         .tribe-events-event-date, .event-list-wrapper-bottom .wraper-bottom-right {
             background: rgba(212,112,169,0.9);
@@ -194,8 +204,61 @@ table.tribe-events-tickets {
 		border-top: 1px solid #fff;
 	}
 	.tickets_price {
-	color: #
+	//color:
 	}
-} 
+}
+
+.page-title {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        left: 0;
+        top: 0;
+    }
+
+    .breadcrumb , h1 {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// Embeds responsive
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    .embed-responsive-item,
+    iframe,
+    embed,
+    object,
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+    }
+}
+
+// Modifier class for 16:9 aspect ratio
+.embed-responsive-16by9 {
+    padding-bottom: 56.25%;
+}
+
+// Modifier class for 4:3 aspect ratio
+.embed-responsive-4by3 {
+    padding-bottom: 75%;
+}
+
 
 @import "media";

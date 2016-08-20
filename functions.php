@@ -167,3 +167,12 @@ function add_my_post_types_to_query( $query ) {
 }
 
 add_image_size( 'custom-size', 360, 220, true );
+
+// function get_custom_cat_template($single_template) {
+// 	global $post;
+// 	if (in_category('video')) {
+// 		$single_template = get_template_directory_uri().'/single-video.php';
+// 	}
+// 	return $single_template;
+// }
+// add_filter("single_template","get_custom_cat_template");

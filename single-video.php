@@ -1,8 +1,3 @@
-<?php
-if (in_category('video')) {
- 	get_template_part('single-video');
- } ?>
-
 <?php get_header(); ?>
 
 	<?php if( ! of_get_option( 'tokopress_page_title_disable' ) ) : ?>
@@ -27,12 +22,16 @@ if (in_category('video')) {
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-single clearfix' ); ?>>
 
 									<div class="inner-post">
-										<?php if( has_post_thumbnail() ) : ?>
+										<?php $youtube_url = get_field('youtube_url');
+											if($youtube_url) {
+											$youtube_id = substr($youtube_url, strpos($youtube_url, "=") + 1);
+											 ?>
 											<div class="post-thumbnail">
-												<?php the_post_thumbnail(); ?>
+												<div class="embed-responsive embed-responsive-16by9">
+													<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $youtube_id ?>" frameborder="0" allowfullscreen></iframe>
+												</div>
 											</div>
-										<?php endif; ?>
-
+										<?php } ?>
 										<div class="col-md-9 col-md-push-3">
 											<div class="post-summary">
 												<?php if( ! of_get_option( 'tokopress_page_title_disable' ) ) : ?>

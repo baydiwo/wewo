@@ -41,7 +41,7 @@ $the_recent_post = new WP_Query( $args );
 					global $tp_post_classes;
 					$tp_post_classes = 'col-sm-6 col-md-12';
 					?>
-					<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php get_template_part( 'content', 'video' ); ?>
 
 			<?php endwhile; ?>
 		</div>
