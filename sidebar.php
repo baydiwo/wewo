@@ -1,6 +1,6 @@
 <div class="col-md-3">
 	<div id="sidebar">
-		
+
 		<?php if( is_active_sidebar( 'primary' ) ) : ?>
 			<?php dynamic_sidebar( 'primary' ); ?>
 		<?php else : ?>

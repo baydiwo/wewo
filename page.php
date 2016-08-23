@@ -5,22 +5,22 @@
 	<?php endif; ?>
 
 	<div id="main-content">
-		
+
 		<div class="container">
 			<div class="row">
-				
+
 				<div class="col-md-9">
-					
+
 					<?php if ( have_posts() ) : ?>
 
 						<div class="main-wrapper">
 
 							<?php do_action( 'tokopress_before_content' ); ?>
-				
+
 							<?php while ( have_posts() ) : the_post(); ?>
-								
+
 								<article id="page-<?php the_ID(); ?>" <?php post_class( 'page-single clearfix' ); ?>>
-	
+
 									<div class="inner-page">
 										<?php if( has_post_thumbnail() ) : ?>
 											<div class="post-thumbnail">
@@ -48,7 +48,7 @@
 							<?php do_action( 'tokopress_after_content' ); ?>
 
 						</div>
-						
+
 					<?php else : ?>
 
 						<?php get_template_part( 'content', 'none' ); ?>
