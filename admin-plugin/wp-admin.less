@@ -1,0 +1,146 @@
+@blue : #3ec9ce;
+@grey : #424a5e;
+
+#wphead {
+  border-bottom: MidnightBlue 1px solid;
+  background-color: #E4F0FE!important;
+  background: -moz-linear-gradient(bottom,#E4F0FE,#B0C4DE);
+  background: -webkit-gradient(linear,left bottom,left top,from(#E4F0FE),to(#B0C4DE));
+}
+
+#wpadminbar {
+    background: #3ec9ce;
+    min-height: 60px;
+    border-bottom: 1px solid darken(@blue,50%);
+}
+
+#wpadminbar .quicklinks>ul>li>a , #wpadminbar #wp-admin-bar-wp-logo>.ab-item{
+    padding: 14px;
+    color: darken(@blue,50%);
+}
+#wpadminbar>#wp-toolbar span.ab-label, #wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
+    color: darken(@blue,50%);
+    transition:none !important;
+}
+#wpadminbar .ab-top-menu>li.hover>.ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus, #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus
+{
+    background: darken(@blue,50%);
+}
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover>a, #wpadminbar .quicklinks .menupop ul li a:focus, #wpadminbar .quicklinks .menupop ul li a:focus strong, #wpadminbar .quicklinks .menupop ul li a:hover, #wpadminbar .quicklinks .menupop ul li a:hover strong, #wpadminbar .quicklinks .menupop.hover ul li a:focus, #wpadminbar .quicklinks .menupop.hover ul li a:hover, #wpadminbar li #adminbarsearch.adminbar-focused:before, #wpadminbar li .ab-item:focus:before, #wpadminbar li a:focus .ab-icon:before, #wpadminbar li.hover .ab-icon:before, #wpadminbar li.hover .ab-item:before, #wpadminbar li:hover #adminbarsearch:before, #wpadminbar li:hover .ab-icon:before, #wpadminbar li:hover .ab-item:before, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover
+{
+    background: darken(@blue,50%);
+}
+#adminmenu #toplevel_page_woocommerce .menu-icon-generic div.wp-menu-image:before {
+    content: "\e01e" !important;
+}
+
+#adminmenu {
+    li {
+        transition:all ease 0.5s;
+            -webkit-transition:all ease 0.5s;
+        a {
+            transition:all ease 0.5s;
+            -webkit-transition:all ease 0.5s;
+            padding:10px !important;
+        }
+
+        &.wp-not-current-submenu >{
+
+            &:focus,&:active,&:hover {
+                background-color: @blue;
+                color: darken(@blue,50%);
+
+                >a {
+                    background-color: @blue;
+                    color: darken(@blue,50%);
+                }
+            }
+        }
+
+        &.wp-has-current-submenu a.wp-has-current-submenu {
+            background: @blue !important;
+        }
+        &.wp-menu-separator {
+            display: none;
+        }
+    }
+}
+
+// #adminmenu li{
+//     a {
+//         padding:10px !important;
+//     }
+
+//     &.menu-top{
+//         transition:all ease 0.3s;
+//         -webkit-transition:all ease 0.3s;
+
+//         &:focus,&:active,&:hover {
+//             background-color: @blue;
+//             color: darken(@blue,50%);
+
+//             a {
+//                 color: darken(@blue,40%) !important;
+//             }
+//         }
+
+//     }
+//     &.opensub>a {
+
+//     }
+//     &.opensub>a.menu-top {
+//         background: none !important;
+//         color:darken(@blue,50%);
+//     }
+
+//     // &.opensub div.wp-menu-image:before {
+//     //     color:darken(@blue,50%);
+//     // }
+
+//     &.wp-has-current-submenu a.wp-has-current-submenu {
+//         background: darken(@blue,10%);
+//     }
+// }
+#adminmenu li a:focus div.wp-menu-image:before, #adminmenu li.opensub div.wp-menu-image:before, #adminmenu li:hover div.wp-menu-image:before {
+    color: darken(@blue,50%);
+}
+//right arrow in menu
+ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu>li.current>a.current:after {
+    display: none;
+}
+#adminmenu .wp-submenu {
+    left:180px;
+    width: 180px;
+    background: darken(@blue,20%) !important;
+    // padding: 0;
+
+    a {
+        color:@blue;
+    }
+}
+div.wp-menu-image:before {
+    transition:none !important;
+}
+
+#adminmenu, #adminmenuback, #adminmenuwrap {
+    width:200px;
+    background: darken(@blue,50%);
+}
+
+#adminmenu {
+    padding:10px;
+    width: 180px;
+}
+
+#wpcontent {
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
+#wpfooter {
+    margin-left: 200px;
+}
+
+#tokopress-meta-box-event {
+    display: none;
+}
