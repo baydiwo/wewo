@@ -109,10 +109,13 @@ $organizer = tribe_get_organizer();
 				<i class="fa fa-ticket"></i>
 				<?php
 				$cost = tribe_get_cost( null, true );
-				if ( $cost != null ) {
+				if ( $cost != "Free" ) {
 					$int = filter_var($cost, FILTER_SANITIZE_NUMBER_INT);
 					$formatted_cost = number_format($int , 0, ',', '.');
 					printf( '<br/><span class="cost">Rp %s</span>', $formatted_cost );
+				}
+				elseif ($cost == "Free") {
+					printf( '<br/><span class="cost">Gratis</span>', $cost );
 				}
 				else {
 					printf( '<br/><span class="cost">Gratis</span>', $cost );

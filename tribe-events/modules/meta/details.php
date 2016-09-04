@@ -133,13 +133,19 @@
 
 		<?php
 		$cost = tribe_get_formatted_cost();
-		if ( ! empty( $cost ) ):
+		if ( $cost != "Free" ):
 			$int = filter_var($cost, FILTER_SANITIZE_NUMBER_INT);
 			$formatted_cost = number_format($int , 0, ',', '.');
 			?>
 		<tr>
 			<th> <?php _e( 'Cost:', 'tokopress' ) ?> </th>
 			<td class="tribe-events-event-cost">Rp <?php echo esc_html( $formatted_cost ) ?> </td>
+		</tr>
+		<?php
+		elseif ($cost == "Free") : ?>
+		<tr>
+			<th> <?php _e( 'Cost:', 'tokopress' ) ?> </th>
+			<td class="tribe-events-event-cost">Gratis</td>
 		</tr>
 		<?php endif ?>
 

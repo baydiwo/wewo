@@ -4,7 +4,7 @@ $args = array(
 	'post_type'=> 'post',
 	'posts_per_page'=>1,
 	'orderby'=>'date',
-	'order'=>'ASC',
+	'order'=>'DESC',
 	'ignore_sticky_posts' => true,
 	'cat' => !52
 	);
