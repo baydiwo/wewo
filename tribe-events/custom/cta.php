@@ -1,4 +1,4 @@
-<?php 
+<?php
 $cta_url = tokopress_get_event_cta_url();
 $cta_target = $cta_url == '#' || strpos($cta_url, 'ticket_redirect') !== false ? '' : '_blank';
 ?>
@@ -10,8 +10,9 @@ $cta_target = $cta_url == '#' || strpos($cta_url, 'ticket_redirect') !== false ?
 	</div>
 	<?php if ( tokopress_get_event_cta_text() ) : ?>
 		<div class="tribe-events-cta-btn">
-			<a class="btn" href="<?php echo esc_url($cta_url); ?>" <?php if ( $cta_target ) echo 'target="'.$cta_target.'"'; ?> >
-				<?php echo tokopress_get_event_cta_text(); ?>
+			<a class="btn" id="btn-registernow" data-id="<?php echo esc_url($cta_url); ?>" href="<?php echo esc_url($cta_url); ?>" <?php if ( $cta_target ) echo 'target="'.$cta_target.'"'; ?> >
+				<?php //echo tokopress_get_event_cta_text(); ?>
+				Register Now
 			</a>
 		</div>
 	<?php endif; ?>

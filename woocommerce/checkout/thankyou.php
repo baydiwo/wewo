@@ -64,7 +64,7 @@ if ( $order ) : ?>
 	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
 	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 	<br>
-	<center><a class="btn" href="<?php echo get_page_link(2194); ?>">Payment Confirmation</a></center>
+	<center><a class="btn btn-payment" href="<?php echo get_page_link(2194); ?>">Payment Confirmation</a></center>
 
 <?php else : ?>
 

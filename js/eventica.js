@@ -108,6 +108,14 @@
 			$('.tribe-events-pagination').hide();
 		}
 
+		$('#btn-registernow').click(function(event) {
+			event.preventDefault();
+			var btnid = $(this).attr('href');
+			 $('html, body').animate({
+	            scrollTop: $(btnid).offset().top - 100
+	        }, 'fast');
+		});
+
 	});
 
 	jQuery(document).on("scroll",function(){
@@ -121,4 +129,7 @@
 
 	//align center in paragraph
 	$('.aligncenter').parent('p').css('textAlign','center');
+
+
+
 })(jQuery);

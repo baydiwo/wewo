@@ -99,7 +99,7 @@ $yellow : #ffce57;
 
     .vcalendar {
         .event-list-wrapper-bottom .wraper-bottom-right {
-            top: 120px;
+            //top: 120px;
         }
         .hentry.tribe-events-first, .type-tribe_events.tribe-events-first , .type-tribe_events {
             padding-bottom: 70px !important;
@@ -268,5 +268,28 @@ table.tribe-events-tickets {
     padding-bottom: 75%;
 }
 
+.woocommerce .woocommerce-thankyou-order-details.order_details {
+    float: left;
+    border: 1px solid #3ec9ce;
+    padding: 20px;
+    background: #e5eff0;
+}
 
+.tribe-link-tickets-message {
+    display: none;
+}
+
+.sf-menu ul {width:19.5em; }
+
+.single-tribe_events #tribe-events-content form.cart, .single-tribe_events #tribe-events-content div.cart {
+    background-color: #3ec9ce;
+}
+
+.btn-payment {
+    background-color: #3ec9ce;
+    font-size: 20px;
+    color: white;
+    border-color: #3ec9ce;
+    transition: all ease .2s;
+}
 @import "media";

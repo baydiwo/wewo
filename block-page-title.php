@@ -5,8 +5,10 @@ if (in_category('video')) {
 	$youtube_id = substr($youtube_url, strpos($youtube_url, "=") + 1);
 	$imageurl = "http://img.youtube.com/vi/".$youtube_id."/maxresdefault.jpg";
 }
+
+//the_post_thumbnail_url()
 ?>
-<section id="page-title" class="page-title" style="background:url('<?php echo (!$imageurl ? the_post_thumbnail_url() : $imageurl); ?>'); background-size: cover; background-position-y:40%;">
+<section id="page-title" class="page-title" style="<?php echo (!$imageurl ? "" : "background:url('".$imageurl."');"); ?> background-size: cover; background-position-y:40%;">
 	<div class="container">
 
 		<?php tokopress_breadcrumb(); ?>
