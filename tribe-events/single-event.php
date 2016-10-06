@@ -55,7 +55,7 @@ else {
 				<!-- Event featured image, but exclude link -->
 				<?php if(has_post_thumbnail()) : ?>
 					<div class="tribe-events-event-image">
-						<?php the_post_thumbnail( 'medium' ); ?>
+						<?php the_post_thumbnail('article-size'); ?>
 					</div>
 				<?php endif; ?>
 

@@ -23,7 +23,7 @@ if (in_category('video')) {
 
 		<?php } elseif ( is_category() ) { ?>
 
-			<h1><?php printf( __( 'Categories: %s', 'tokopress' ), single_cat_title( '', false ) ); ?></h1>
+			<h1><?php printf( __( '%s', 'tokopress' ), single_cat_title( '', false ) ); ?></h1>
 
 		<?php } elseif ( is_tag() ) { ?>
 

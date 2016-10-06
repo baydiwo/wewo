@@ -50,7 +50,7 @@ $yellow : #ffce57;
     }
 
     .event-list-wrapper-top {
-        height: 220px;
+        max-height: 220px;
     }
 
     .event-list-wrapper-bottom {
@@ -270,7 +270,7 @@ table.tribe-events-tickets {
 
 .woocommerce .woocommerce-thankyou-order-details.order_details {
     float: left;
-    border: 1px solid #3ec9ce;
+    border: 1px solid #3aadd9;
     padding: 20px;
     background: #e5eff0;
 }
@@ -282,14 +282,38 @@ table.tribe-events-tickets {
 .sf-menu ul {width:19.5em; }
 
 .single-tribe_events #tribe-events-content form.cart, .single-tribe_events #tribe-events-content div.cart {
-    background-color: #3ec9ce;
+    background-color: #3aadd9;
+    color: white;
+
+    button[type="submit"].button.alt {
+        background-color: #a0d9ef;
+        border-color:#fff;
+        color:#000;
+    }
+
+    .woocommerce-Price-amount.amount {
+        color: white;
+    }
+
+    table.tribe-events-tickets td {
+        border-top:1px solid rgba(255,255,255,0.3);
+    }
+
 }
 
 .btn-payment {
-    background-color: #3ec9ce;
+    background-color: #3aadd9;
     font-size: 20px;
     color: white;
-    border-color: #3ec9ce;
+    border-color: #3aadd9;
     transition: all ease .2s;
+}
+
+.size-article-size {
+    width:100%;
+}
+
+.blog-list .post-inner .post-summary:after {
+    bottom:5px;
 }
 @import "media";

@@ -39,7 +39,7 @@ global $tp_post_classes;
 						$width = $_wp_additional_image_sizes['blog-thumbnail']['width'];
 						$height = $_wp_additional_image_sizes['blog-thumbnail']['height'];
 						?>
-						<img src="//placehold.it/<?php echo esc_attr( $width ); ?>x<?php echo esc_attr( $height ); ?>" alt="<?php the_title(); ?>" class="no-thumb">
+						<!-- <img src="//placehold.it/<?php echo esc_attr( $width ); ?>x<?php echo esc_attr( $height ); ?>" alt="<?php the_title(); ?>" class="no-thumb"> -->
 					</a>
 				</div>
 			<?php endif; ?>

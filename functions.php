@@ -167,6 +167,7 @@ function add_my_post_types_to_query( $query ) {
 }
 
 add_image_size( 'custom-size', 360, 220, true );
+add_image_size( 'article-size', 650, 480, true );
 
 // function get_custom_cat_template($single_template) {
 // 	global $post;
