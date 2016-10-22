@@ -177,3 +177,22 @@ add_image_size( 'article-size', 650, 480, true );
 // 	return $single_template;
 // }
 // add_filter("single_template","get_custom_cat_template");
+
+function wpdocs_custom_excerpt_length( $length ) {
+	if(in_category(51)) {
+		return 250;
+	}
+	else {
+		return 13;
+	}
+
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( ' <a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
